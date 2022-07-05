@@ -1,0 +1,328 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginStart="16dp"
+    android:layout_marginTop="32dp"
+    android:layout_marginEnd="16dp"
+    android:layout_marginBottom="32dp"
+    tools:context=".MainActivity">
+
+    <ImageView
+        android:id="@+id/background"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:src="@drawable/bg"
+        android:alpha="0.15"
+        app:layout_constraintDimensionRatio="1:1.15"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+    <ImageView
+        android:layout_width="225dp"
+        android:layout_height="220dp"
+        android:layout_marginBottom="2dp"
+        android:src="@drawable/notification"
+        app:layout_constraintBottom_toBottomOf="@id/cup"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginEnd="2dp"/>
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/cup"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/cup"
+        android:layout_marginBottom="20dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/background"
+        app:layout_constraintBottom_toBottomOf="@id/background"
+        app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/poppins_semi_bold"
+        android:text="Details"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingStart="12dp"
+        android:src="@drawable/ic_baseline_arrow_back_24"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/basket"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="12dp"
+        android:src="@drawable/ic_outline_shopping_basket_24"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:tint="#DED1B3" />
+
+    <ImageView
+        android:layout_width="8dp"
+        android:layout_height="8dp"
+        android:layout_margin="3dp"
+        android:src="@drawable/notification"
+        app:layout_constraintEnd_toEndOf="@id/basket"
+        app:layout_constraintTop_toTopOf="@id/basket" />
+
+    <TextView
+        android:id="@+id/caramel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/poppins_semi_bold"
+        android:text="Caramel"
+        android:textColor="@color/black"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="@id/background"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/frappuccino"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="28dp"
+        android:fontFamily="@font/poppins_semi_bold"
+        android:text="Frappuccino"
+        android:textColor="@color/black"
+        android:textSize="24sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/caramel" />
+
+    <TextView
+        android:id="@+id/price"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:fontFamily="@font/poppins_semi_bold"
+        android:text="$30.00"
+        android:textColor="#498F6C"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/caramel" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="34dp"
+        android:fontFamily="@font/poppins_medium"
+        android:text="Best Sales"
+        android:textColor="#BBBBBF"
+        android:textSize="9sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/price" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="46dp"
+        android:fontFamily="@font/poppins_medium"
+        android:text="Size Options"
+        android:textColor="#B8B7BE"
+        android:textSize="14sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/frappuccino" />
+
+    <androidx.appcompat.widget.AppCompatImageButton
+        android:id="@+id/size"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="36dp"
+        android:background="@drawable/notification"
+        android:backgroundTint="#F0F7F2"
+        android:src="@drawable/ic_coffee_cup"
+        app:layout_constraintEnd_toStartOf="@+id/grande_size"
+        app:layout_constraintHorizontal_chainStyle="spread_inside"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/frappuccino"
+        app:layout_constraintBottom_toTopOf="@id/order"
+        app:layout_constraintVertical_bias="0.1"/>
+
+    <TextView
+        android:id="@+id/tall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="2dp"
+        android:fontFamily="@font/poppins_medium"
+        android:text="Tall"
+        android:textColor="#0D0818"
+        android:textSize="12sp"
+        app:layout_constraintEnd_toEndOf="@id/size"
+        app:layout_constraintStart_toStartOf="@id/size"
+        app:layout_constraintTop_toBottomOf="@id/size" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/poppins_regular"
+        android:text="12 Fi Oz"
+        android:textColor="#C4C3C6"
+        android:textSize="8dp"
+        app:layout_constraintEnd_toEndOf="@id/tall"
+        app:layout_constraintStart_toStartOf="@id/tall"
+        app:layout_constraintTop_toBottomOf="@id/tall" />
+
+    <androidx.appcompat.widget.AppCompatImageButton
+        android:id="@+id/grande_size"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:background="@drawable/notification"
+        android:backgroundTint="#F0F7F2"
+        android:src="@drawable/ic_coffee_cup_grande"
+        app:layout_constraintEnd_toStartOf="@+id/venti_size"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/size"
+        app:layout_constraintTop_toTopOf="@id/size" />
+
+    <TextView
+        android:id="@+id/grande"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="2dp"
+        android:fontFamily="@font/poppins_medium"
+        android:text="Grande"
+        android:textColor="#0D0818"
+        android:textSize="12sp"
+        app:layout_constraintEnd_toEndOf="@id/grande_size"
+        app:layout_constraintStart_toStartOf="@id/grande_size"
+        app:layout_constraintTop_toBottomOf="@id/grande_size" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/poppins_regular"
+        android:text="16 Fi Oz"
+        android:textColor="#C4C3C6"
+        android:textSize="8dp"
+        app:layout_constraintEnd_toEndOf="@id/grande"
+        app:layout_constraintStart_toStartOf="@id/grande"
+        app:layout_constraintTop_toBottomOf="@id/grande" />
+
+    <androidx.appcompat.widget.AppCompatImageButton
+        android:id="@+id/venti_size"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:background="@drawable/notification"
+        android:backgroundTint="#40976C"
+        android:src="@drawable/ic_coffee_cup_venti"
+        app:layout_constraintEnd_toStartOf="@+id/custom_size"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/grande_size"
+        app:layout_constraintTop_toTopOf="@id/grande_size" />
+
+    <TextView
+        android:id="@+id/venti"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="2dp"
+        android:fontFamily="@font/poppins_medium"
+        android:text="Venti"
+        android:textColor="#0D0818"
+        android:textSize="12sp"
+        app:layout_constraintEnd_toEndOf="@id/venti_size"
+        app:layout_constraintStart_toStartOf="@id/venti_size"
+        app:layout_constraintTop_toBottomOf="@id/venti_size" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/poppins_regular"
+        android:text="24 Fi Oz"
+        android:textColor="#C4C3C6"
+        android:textSize="8dp"
+        app:layout_constraintEnd_toEndOf="@id/venti"
+        app:layout_constraintStart_toStartOf="@id/venti"
+        app:layout_constraintTop_toBottomOf="@id/venti" />
+
+    <androidx.appcompat.widget.AppCompatImageButton
+        android:id="@+id/custom_size"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:background="@drawable/notification"
+        android:backgroundTint="#F0F7F2"
+        android:src="@drawable/ic_coffee_cup_custom"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/venti_size"
+        app:layout_constraintTop_toTopOf="@id/venti_size" />
+
+    <TextView
+        android:id="@+id/custom"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="2dp"
+        android:fontFamily="@font/poppins_medium"
+        android:text="Custom"
+        android:textColor="#0D0818"
+        android:textSize="12sp"
+        app:layout_constraintEnd_toEndOf="@id/custom_size"
+        app:layout_constraintStart_toStartOf="@id/custom_size"
+        app:layout_constraintTop_toBottomOf="@id/custom_size" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/poppins_regular"
+        android:text="__ Fi Oz"
+        android:textColor="#C4C3C6"
+        android:textSize="8dp"
+        app:layout_constraintEnd_toEndOf="@id/custom"
+        app:layout_constraintStart_toStartOf="@id/custom"
+        app:layout_constraintTop_toBottomOf="@id/custom" />
+    <androidx.appcompat.widget.AppCompatImageButton
+        android:id="@+id/remove"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:background="@drawable/notification"
+        android:backgroundTint="#46A777"
+        android:src="@drawable/ic_baseline_remove_24"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="@id/order"
+        app:layout_constraintTop_toTopOf="@id/order"
+        android:layout_marginStart="20dp"/>
+    <androidx.appcompat.widget.AppCompatImageButton
+        android:id="@+id/plus"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:background="@drawable/notification"
+        android:backgroundTint="#46A777"
+        android:src="@drawable/ic_baseline_add_24"
+        app:layout_constraintStart_toStartOf="@id/remove"
+        app:layout_constraintBottom_toBottomOf="@id/order"
+        app:layout_constraintTop_toTopOf="@id/order"
+        android:layout_marginStart="70dp"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="1"
+        android:fontFamily="@font/poppins_semi_bold"
+        android:textSize="18sp"
+        android:textColor="@color/black"
+        app:layout_constraintStart_toEndOf="@id/remove"
+        app:layout_constraintEnd_toStartOf="@id/plus"
+        app:layout_constraintTop_toTopOf="@id/plus"
+        app:layout_constraintBottom_toBottomOf="@id/plus"/>
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/order"
+        android:layout_width="225dp"
+        android:layout_height="50dp"
+        android:background="@drawable/order"
+        android:text="Add to Order"
+        android:fontFamily="@font/poppins_medium"
+        android:textColor="#E9FFFA"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginEnd="8dp"/>
+</androidx.constraintlayout.widget.ConstraintLayout>
